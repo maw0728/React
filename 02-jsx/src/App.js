@@ -1,26 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      Hello <b>react</b>
     </div>
   );
 }
-
+/*
+JSX를 사용하지 않고 자바스크립트로만 리액트를 만들때
+function App() {
+  return React.createElement(
+    "div",
+    null,
+    "Hello ",
+    React.createElement("b", null, "react")
+  );
+}
+*/
 export default App;
