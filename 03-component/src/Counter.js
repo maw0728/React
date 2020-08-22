@@ -23,17 +23,16 @@ class Counter extends Component {
         <button
           // onClick을 통해 버튼이 클릭되었을 때 호출할 함수를 지정합니다.
           onClick={() => {
-            // this.setState를 사용하여 state에 새로운 값을 넣을 수 있습니다.
-            // 두 번 사용해도 버튼을 누르면 1씩증가한다
-            // this.setState({ number: number + 1 });
-            // this.setState({ number: this.state.number + 1 });
-            // 이렇게 하면 두번씩오른다
-            this.setState((prevState) => {
-              return { number: prevState.number + 1 };
-            });
-            this.setState((prevState) => {
-              return { number: prevState.number + 1 };
-            });
+            // 콜백 함수를 등록하여 처리한다
+            this.setState(
+              (prevState) => {
+                return { number: prevState.number + 1 };
+              },
+              () => {
+                console.log("방금 setState가 호출되었습니다.");
+                console.log(this.state);
+              }
+            );
           }}
         >
           +1
