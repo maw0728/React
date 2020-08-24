@@ -22,11 +22,22 @@ class ValidationSample extends Component {
   render() {
     return (
       <div>
-        <input type="password" value={this.state.password} onChange={this.handleChange} className{this.state.clicked?(this.state.validated?'success':'failure'):''} />
+        <input
+          type="password"
+          value={this.state.password}
+          onChange={this.handleChange}
+          className={
+            this.state.clicked
+              ? this.state.validated
+                ? "success"
+                : "failure"
+              : ""
+          }
+        />
         <button onClick={this.handleButtonClick}>검증하기</button>
       </div>
     );
   }
 }
 
-export default ValidationSample
+export default ValidationSample;
