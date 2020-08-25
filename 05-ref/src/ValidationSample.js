@@ -30,7 +30,7 @@ class ValidationSample extends Component {
             this.state.clicked
               ? this.state.validated
                 ? "success"
-                : "failure"
+                : "faliure"
               : ""
           }
         />
