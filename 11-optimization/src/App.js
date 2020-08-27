@@ -5,10 +5,10 @@ import TodoList from "./components/TodoList";
 
 function createBulkTodos() {
   const array = [];
-  for (let i = 1; i <= 9999999; i++) {
+  for (let i = 1; i <= 2500; i++) {
     array.push({
       id: i,
-      text: `할 일 ${Math.ceil(Math.random() * 100000)}`,
+      text: `할 일 ${i}`,
       checked: false,
     });
   }
